@@ -45,7 +45,7 @@ class Post(models.Model):
     title = models.CharField(max_length=250, verbose_name='Заголовок')
     slug = models.SlugField(max_length=250, verbose_name='url', unique=True)
     author = models.CharField(max_length=100, verbose_name='Автор')
-    content = models.TextField(blank=True)
+    content = models.TextField(blank=True, verbose_name='Контент')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Опубликовано')
     photo = models.ImageField(upload_to='photo/%Y/%m/%d/', blank=True, verbose_name='Фото')
     views = models.IntegerField(default=0, verbose_name='Просмотров')
