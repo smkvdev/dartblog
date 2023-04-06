@@ -51,8 +51,12 @@ class Post(models.Model):
     views = models.IntegerField(default=0, verbose_name='Просмотров')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name='posts', verbose_name='Категория')
     tags = models.ManyToManyField(Tag, blank=True, related_name='posts', verbose_name='Теги')
+
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('post', kwargs={'slug':self.slug})
     class Meta:
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
