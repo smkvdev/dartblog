@@ -22,10 +22,10 @@
                                                 href="{{post.category.get_absolute_url}}">{{post.category}}</a> </span>
                                         <br>
                                         {% if post.tags %}
-                                            <span>Теги:</span>
-                                            {% for teg in post.tags.all %}
-                                                <a  href="{{teg.get_absolute_url}}">{{ teg.title }}</a>
-                                            {% endfor %}
+                                        <span>Теги:</span>
+                                        {% for teg in post.tags.all %}
+                                        <a href="{{teg.get_absolute_url}}">{{ teg.title }}</a>
+                                        {% endfor %}
                                         {% endif %}
                                         <br>
                                         <span>Просмотров:</span>
