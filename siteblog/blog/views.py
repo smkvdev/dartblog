@@ -44,7 +44,7 @@ class GetPost(DetailView):
 
 class PostsByTag(ListView):
     template_name = 'blog/tag.html'
-    context_object_name = 'posts'
+    context_object_name = 'tags'
     paginate_by = 4
     allow_empty = False
 
