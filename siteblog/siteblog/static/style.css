@@ -283,6 +283,10 @@ section.blog-post-area h4 span.author-name {
     text-decoration: none;
 }
 
+.blog-post-area .border-top {
+    border-top: 1px solid #40c4ff;
+}
+
 .wrapper footer.footer {
     height: 130px;
 }
@@ -743,6 +747,30 @@ section.blog-post-area h4 span.author-name {
 }
 .single-blog-area .newsletter input[type="submit"] {
     width: 40%;
+    background: #40c4ff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Geometria;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.grid .portfolio-item img {
+    width: 100px;
+    height: auto;
+}
+
+
+.single-blog-area .searcharticle form {
+    margin: 30px 0 0;
+}
+.single-blog-area .searcharticle input[type="search"] {
+    width: 100%;
+    margin-right: 20px;
+}
+.single-blog-area .searcharticle input[type="button"] {
+    width: 100%;
+    margin-top: 5px;
     background: #40c4ff;
     color: #fff;
     text-transform: uppercase;

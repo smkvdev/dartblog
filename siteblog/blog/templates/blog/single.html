@@ -9,6 +9,8 @@
 
 <section class="single-blog-area">
     <div class="container">
+
+
         <div class="row">
             <div class="col-md-12">
                 <div class="border-top">
@@ -136,20 +138,18 @@
                     </div>
                     <div class="col-md-4">
 
-                        {% get_popular 5 %}
+                        <div class="newsletter">
+                            <h2 class="sidebar-title">Поиск</h2>
+                            <form action="{% url 'search' %}" method="get">
+                                <input type="text" name="s" placeholder="Найти">
+                                <input type="submit" value="Поиск">
+                            </form>
+                        </div>
 
-                        <div class="tags">
+                        {% get_popular 5 %}
 
                         {% get_tags %}
 
-                        </div>
-                        <div class="newsletter">
-                            <h2 class="sidebar-title">Subscribe To oUR nEWSLETTER</h2>
-                            <form action="#" method="post">
-                                <input type="email" name="" id="" placeholder="Email">
-                                <input type="submit" value="Subscribe">
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>

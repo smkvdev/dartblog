@@ -32,11 +32,13 @@
                 {% for tag in tags %}
                 <div class="col-md-3">
                     <div class="single-post">
-                        {% if tag.photo %}
-                        <img src="{{ tag.photo.url }}" alt="{{ tag.title }}">
-                        {% else %}
-                        <img src="https://picsum.photos/id/1060/300/201?blur=2" alt="{{ tag.title }}">
-                        {% endif %}
+                        <a href="{{ tag.get_absolute_url }}">
+                            {% if tag.photo %}
+                            <img src="{{ tag.photo.url }}" alt="{{ tag.title }}">
+                            {% else %}
+                            <img src="https://picsum.photos/id/1060/300/201?blur=2" alt="{{ tag.title }}">
+                            {% endif %}
+                        </a>
                         <h3><a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a></h3>
                         <h4><span>автор: <span class="author-name">{{ tag.author }}</span></span>
                         </h4>
